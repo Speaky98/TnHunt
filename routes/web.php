@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("/Table",function (){
+    return view("layouts.Dashboard.tables.simple");
+})->name("firstpage");
+Route::get("/Front",function (){
+    return view("layouts.Client.main");
+});
