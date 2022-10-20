@@ -22,7 +22,7 @@ class ProgChasse extends Authenticatable
         'date',
         'numpeople',
         'description',
-        'costs',
+        'costs', 
     ];
 
     /**
