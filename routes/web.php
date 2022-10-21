@@ -22,3 +22,9 @@ Route::get("/Table",function (){
 Route::get("/Front",function (){
     return view("layouts.Client.main");
 });
+
+
+Route::resource('animals', \App\Http\Controllers\AnimalController::class);
+Route::resource('animalsFront', \App\Http\Controllers\AnimalControllerFront::class);
+Route::resource('chiens', \App\Http\Controllers\ChienController::class);
+Route::resource('chiensFront', \App\Http\Controllers\ChienControllerFront::class);

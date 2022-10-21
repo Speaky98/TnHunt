@@ -5,7 +5,7 @@
             <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
                 <div class="container-fluid px-0">
                     <a class="navbar-brand font-weight-bolder ms-sm-3" href="https://demos.creative-tim.com/material-kit/index" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-                        Material Kit 2
+                       TN-HUNT
                     </a>
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon mt-2">
@@ -416,6 +416,7 @@
         </div>
     </div>
 </div>
+{{--
 <header class="header-2">
     <div class="page-header min-vh-75 relative" style="background-image: url({{asset("assets/img/bg2.jpg")}})">
         <span class="mask bg-gradient-primary opacity-4"></span>
@@ -429,3 +430,4 @@
         </div>
     </div>
 </header>
+--}}
