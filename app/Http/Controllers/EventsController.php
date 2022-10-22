@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 class EventsController extends Controller
 {
-   
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['events', 'show']]);
+    }
     public function index()
     {
         $events = Event::all();
