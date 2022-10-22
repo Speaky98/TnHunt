@@ -24,6 +24,17 @@ class EventsController extends Controller
   
      public function createEvent(Request $req)
     {
+        $req->validate([
+            'name'=>'required|min:5',
+            'address'=>'required',
+            'dateS'=>'required|after:today',
+            'dateE'=>'required|after:dateS'
+
+   ],[
+    'dateE.after'=>'End date must be after Start Date',
+    'dateS.after'=>'Start date must be after Today',
+    'name.min'=>'Name is must have at least 5 char'
+   ]);
        $event=new Event;
        $event->name=$req->name;
        $event->address=$req->address;
