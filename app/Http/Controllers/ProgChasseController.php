@@ -15,7 +15,7 @@ class ProgChasseController extends Controller
     public function index()
     {
         $ProgChasse = ProgChasse::all();
-        return view ('ProgChasse.index')->with('ProgChasses', $ProgChasse);
+        return view ('ProgChasse.index')->with('ProgChasse', $ProgChasse);
     }
 
     /**
@@ -50,7 +50,7 @@ class ProgChasseController extends Controller
     public function show($id)
     {
         $ProgChasse = ProgChasse::find($id);
-        return view('ProgChasse.show')->with('ProgChasses', $ProgChasse);
+        return view('ProgChasse.show')->with('ProgChasse', $ProgChasse);
     }
 
     /**
@@ -62,7 +62,7 @@ class ProgChasseController extends Controller
     public function edit($id)
     {
         $ProgChasse = ProgChasse::find($id);
-        return view('ProgChasse.edit')->with('ProgChasses', $ProgChasse);
+        return view('ProgChasse.edit')->with('ProgChasse', $ProgChasse);
     }
 
     /**
