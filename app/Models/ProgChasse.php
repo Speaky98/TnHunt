@@ -17,6 +17,7 @@ class ProgChasse extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $table = 'progchasse';
     protected $fillable = [
         'location',
         'date',
