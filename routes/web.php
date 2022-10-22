@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,7 @@ Route::get("/Table",function (){
 Route::get("/Front",function (){
     return view("layouts.Client.main");
 });
+
+Route::resource("/event", EventsController::class);
+Route::post('add',[EventsController::class,'createEvent']);
+
