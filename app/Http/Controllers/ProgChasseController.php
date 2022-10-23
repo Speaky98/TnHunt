@@ -38,7 +38,7 @@ class ProgChasseController extends Controller
     {
         $input = $request->all();
         ProgChasse::create($input);
-        return redirect('ProgChasse')->with('flash_message', 'ProgChasse Addedd!');  
+        return redirect('progchasse')->with('flash_message', 'ProgChasse Addedd!');  
     }
 
     /**
@@ -77,7 +77,7 @@ class ProgChasseController extends Controller
         $ProgChasse = ProgChasse::find($id);
         $input = $request->all();
         $ProgChasse->update($input);
-        return redirect('ProgChasse')->with('flash_message', 'ProgChasse Updated!');
+        return redirect('progchasse')->with('flash_message', 'ProgChasse Updated!');
     }
 
     /**
@@ -89,6 +89,6 @@ class ProgChasseController extends Controller
     public function destroy($id)
     {
         ProgChasse::destroy($id);
-        return redirect('ProgChasse')->with('flash_message', 'ProgChasse deleted!');
+        return redirect('progchasse')->with('flash_message', 'ProgChasse deleted!');
     }
 }
