@@ -44,9 +44,9 @@
                                     <div class="card-body">
                                     <h5 class="card-title">Location : {{ $ProgChasse->location }}</h5>
                                     <p class="card-text">Address : {{ $ProgChasse->date  }}</p>
-                                    <p class="card-text">Mobile : {{ $ProgChasse->numpeople  }}</p>
+                                    <p class="card-text">Nombre de personne : {{ $ProgChasse->numpeople  }}</p>
                                     <p class="card-text">Address : {{ $ProgChasse->description  }}</p>
-                                    <p class="card-text">Mobile : {{ $ProgChasse->costs  }}</p>
+                                    <p class="card-text">Prix : {{ $ProgChasse->costs  }}</p>
                                     </div>
                                 
                                 </hr>

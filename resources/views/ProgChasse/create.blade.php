@@ -26,9 +26,15 @@
                             <form action="{{ url('progchasse') }}" method="post">
                                 {!! csrf_field() !!}
                                 <label>Location</label></br>
-                                <input type="text" name="location" id="location" class="form-control"></br>
+                                <input type="text" name="location" id="location" class="form-control">
+                                @error('location')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Date</label></br>
-                                <input type="date" name="date" id="date" class="form-control"></br>
+                                <input type="date" name="date" id="date" class="form-control">
+                                @error('date')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Nombre de personnes</label></br>
                                 <input type="number" name="numpeople" id="numpeople" class="form-control"></br>
                                 <label>Description</label></br>
