@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rayon;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Route;
 
 class RayonController extends Controller
@@ -19,8 +24,8 @@ class RayonController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Routing\Redirector
+     * @param Request $request
+     * @return Redirector
      */
 
     public function Add(Request $request)
@@ -36,16 +41,32 @@ class RayonController extends Controller
         $rayon->save();
         return redirect('/Rayon');
     }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param $id
+     * @return Application|Factory|View
+     */
+
+    public function Modifybefore($id)
+    {
+        $route = Route::current()->getName();
+        return view("layouts.Dashboard.tables.crud.modifyrayon")->with('req',Rayon::find($id))->with('route',$route);
+    }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param Request $request
+     * @return RedirectResponse
      */
 
     public function Modify(Request $request)
     {
+        $request->validate([
+            'code' => 'required|max:191',
+            'lib' => 'required|max:191'
+        ]);
         Rayon::where('id', $request->id)->update(['code'=>$request->code,'libelle'=>$request->lib]);
         return redirect()->route('rayonpage');
     }
@@ -53,8 +74,8 @@ class RayonController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param $id
+     * @return RedirectResponse
      */
 
     public function Delete($id)

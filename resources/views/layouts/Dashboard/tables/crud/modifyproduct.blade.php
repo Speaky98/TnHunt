@@ -28,23 +28,32 @@
         <div class="card-header">
             <h3 class="card-title">Product</h3>
         </div>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <!-- /.card-header -->
         <!-- form start -->
-        <form name="F1" method="POST" action="{{ route('Modifyprod2')}}" id="formu1">
+        <form name="F1" method="POST" action="{{ route('Modifyprod2')}}" id="formu1" enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <input id="in1" hidden type="number" value="{{ $req->id}}" name="id" >
                 <div class="form-group">
                     <label for="exampleInputName">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name" name="name" required value="{{$req->name}}">
+                    <input type="text" class="form-control" id="exampleInputName" placeholder="Enter Name" name="name" value="{{$req->name}}">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputCategory">Category</label>
-                    <input type="text" class="form-control" id="exampleInputCategory" placeholder="Category" name="cat" required value="{{$req->cat}}">
+                    <input type="text" class="form-control" id="exampleInputCategory" placeholder="Category" name="cat" value="{{$req->category}}">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPrice_unit">Price_unit</label>
-                    <input type="number" step="any"  class="form-control" id="exampleInputPrice_unit" placeholder="Price_unit" required name="pri" value="{{$req->pri}}">
+                    <input type="number" step="any"  class="form-control" id="exampleInputPrice_unit" placeholder="Price_unit" name="pri" value="{{$req->price_unit}}">
                 </div>
                 <div class="form-group">
                     <label for="formFile" class="form-label">Image</label>
@@ -52,11 +61,11 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputLimited">Limited</label>
-                    <input type="number" min="0" max="1" class="form-control" id="exampleInputLimited" placeholder="Limited" name="lim" value="{{$req->lim}}">
+                    <input type="number" min="0" max="1" class="form-control" id="exampleInputLimited" placeholder="Limited" name="lim" value="{{$req->limited}}">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputActive_for_sale">Active_for_sale</label>
-                    <input type="number" min="0" max="1" class="form-control" id="exampleInputActive_for_sale" placeholder="Active_for_sale" name="act" value="{{$req->act}}">
+                    <input type="number" min="0" max="1" class="form-control" id="exampleInputActive_for_sale" placeholder="Active_for_sale" name="act" value="{{$req->active_for_sale}}">
                 </div>
                 <div class="form-group">
                     <label>Rayon</label>

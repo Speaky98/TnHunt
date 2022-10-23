@@ -5,20 +5,23 @@ namespace App\Http\Controllers;
 use App\Models\Animal;
 use App\Models\Chien;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class ChienController extends Controller
 {
 
     public function index()
     {
+        $route = Route::current()->getName();
         $chiens = Chien::all();
-        return view('layouts.Dashboard.chiens.index',['chiens'=>$chiens]);
+        return view('layouts.Dashboard.chiens.index',['chiens'=>$chiens,"route"=>$route]);
     }
 
     public function create()
     {
+        $route = Route::current()->getName();
         $chiens = Animal::all();
-        return view('layouts.Dashboard.chiens.create',['animals'=>$chiens]);
+        return view('layouts.Dashboard.chiens.create',['animals'=>$chiens,"route"=>$route]);
     }
 
     public function store(Request $request)
@@ -26,7 +29,7 @@ class ChienController extends Controller
         $request->validate([
             'name' => 'required|max:50',
             'breed' => 'required|max:20',
-            'prey' => 'required|max:50',
+            'animal_id' => 'required|max:50',
             'image' => 'mimes:jpg,png',
             'description' => 'required|max:255',
         ]);
@@ -58,9 +61,10 @@ class ChienController extends Controller
 
     public function edit($id)
     {
+        $route = Route::current()->getName();
         $chien=Chien::find($id);
         $animals=Animal::all();
-        return view('layouts.Dashboard.chiens.edit',compact('chien','animals'));
+        return view('layouts.Dashboard.chiens.edit',compact('chien','animals','route'));
     }
 
     public function update(Request $request, $id)

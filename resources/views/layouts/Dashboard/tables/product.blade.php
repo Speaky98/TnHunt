@@ -70,18 +70,7 @@
                                         <td>{{$product->total_rate}}</td>
                                         <td>{{$product->user_rate}}</td>
                                         <td>{{$product->getrayon($product->rayon_id)}}</td>
-                                        <td><form name="F1" method="POST" id="formu1" action="{{route("Modifyprod1")}}">
-                                                @csrf
-                                                <input id="in1" hidden type="number" value="{{ $product->id}}" name="id" >
-                                                <input id="in2" hidden type="text" value="{{ $product->name }}" name="name" >
-                                                <input id="in3" hidden type="text" value="{{ $product->category }}" name="cat" >
-                                                <input id="in4" hidden type="number" value="{{ $product->price_unit }}" name="pri" >
-                                                <input id="in5" hidden type="text" value="{{ $product->image }}" name="ima" >
-                                                <input id="in6" hidden type="number" value="{{ $product->limited }}" name="lim" >
-                                                <input id="in7" hidden type="number" value="{{ $product->active_for_sale }}" name="act" >
-                                                <input id="in8" hidden type="number" value="{{ $product->rayon_id }}" name="ray" >
-                                                <button id="in9" type="submit" class="btn btn-dark" >Modify Product</button>
-                                            </form></td>
+                                        <td><a class="btn btn-dark" href="{{route("Modifyprod1",$product->id)}}">Modify Product</a></td>
                                         <td><a class="btn btn-danger" onclick="return confirm('Are you sure?')" href="{{route("Deleteprod1",$product->id)}}">Delete Product</a></td>
                                     </tr>
                                     @endforeach
@@ -128,7 +117,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="formFile" class="form-label">Image</label>
-                                                <input class="form-control" type="file" id="formFile" required name="ima">
+                                                <input class="form-control" type="file" id="formFile" name="ima">
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputLimited">Limited</label>

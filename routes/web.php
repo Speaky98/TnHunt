@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\AnimalControllerFront;
+use App\Http\Controllers\ChienController;
+use App\Http\Controllers\ChienControllerFront;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RayonController;
 use App\Models\Rayon;
@@ -36,30 +40,25 @@ Route::get('/Dashboard', function () {
 
 Route::get("/test",[ProductController::class,'indextest'])->name("testtest");
 
+/********Dashboard product*********/
+
 Route::get("/Product",[ProductController::class,'index'])->name("productpage");
 
 Route::post("/Ajoutafterproduct",[ProductController::class,'Add'])->name("Ajoutprod2");
 
-Route::post("/Modifbeforeproduct",function (Request $request){
-    $list=Rayon::all();
-    $route = Route::current()->getName();
-    return view("layouts.Dashboard.tables.crud.modifyproduct")->with('req',$request)->with('route',$route)->with('list',$list);
-})->name("Modifyprod1");
+Route::get("/Modifbeforeproduct/{id}",[ProductController::class,'Modifybefore'])->name("Modifyprod1");
 
 Route::post("/Modifafterproduct",[ProductController::class,'Modify'])->name("Modifyprod2");
 
 Route::get("/Deleteproduct/{id}",[ProductController::class,'Delete'])->name("Deleteprod1");
 
-/********Dashboard*********/
+/********Dashboard rayon*********/
 
 Route::get("/Rayon",[RayonController::class,'index'])->name("rayonpage");
 
 Route::post("/Ajoutafterrayon",[RayonController::class,'Add'])->name("Ajoutray2");
 
-Route::post("/Modifbeforerayon",function (Request $request){
-    $route = Route::current()->getName();
-    return view("layouts.Dashboard.tables.crud.modifyrayon")->with('req',$request)->with('route',$route);
-})->name("Modifyray1");
+Route::get("/Modifbeforerayon{id}",[RayonController::class,'Modifybefore'])->name("Modifyray1");
 
 Route::post("/Modifafterrayon",[RayonController::class,'Modify'])->name("Modifyray2");
 
@@ -70,5 +69,15 @@ Route::get("/Deleterayon/{id}",[RayonController::class,'Delete'])->name("Deleter
 Route::get("/Productclient",[ProductController::class,'indexclient'])->name("productpageclient");
 
 Route::post("/Ajoutafterrate",[ProductController::class,'Addrate'])->name("Modifyrate2");
+
+/***********Tarak*******/
+
+Route::resource('animals', AnimalController::class);
+
+Route::resource('animalsFront', AnimalControllerFront::class);
+
+Route::resource('chiens', ChienController::class);
+
+Route::resource('chiensFront', ChienControllerFront::class);
 
 

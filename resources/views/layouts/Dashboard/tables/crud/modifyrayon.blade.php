@@ -28,6 +28,15 @@
                             <div class="card-header">
                                 <h3 class="card-title">Rayon</h3>
                             </div>
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <!-- /.card-header -->
                             <!-- form start -->
                             <form name="F1" method="POST" action="{{ route('Modifyray2')}}" id="formu1">
@@ -36,11 +45,11 @@
                                     <input id="in1" hidden type="number" value="{{ $req->id}}" name="id" >
                                     <div class="form-group">
                                         <label for="exampleInputCode">Code</label>
-                                        <input type="text" class="form-control" id="exampleInputCode" placeholder="Code" name="code" required value="{{$req->code}}">
+                                        <input type="text" class="form-control" id="exampleInputCode" placeholder="Code" name="code" value="{{$req->code}}">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputLibelle">Libelle</label>
-                                        <input type="text" class="form-control" id="exampleInputLibelle" placeholder="Libelle" name="lib" required value="{{$req->lib}}">
+                                        <input type="text" class="form-control" id="exampleInputLibelle" placeholder="Libelle" name="lib" value="{{$req->libelle}}">
                                     </div>
                                 </div>
                                 <!-- /.card-body -->

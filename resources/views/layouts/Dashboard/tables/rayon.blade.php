@@ -55,13 +55,7 @@
                                         <tr>
                                             <td>{{$rayon->code}}</td>
                                             <td>{{$rayon->libelle}}</td>
-                                            <td><form name="F1" method="POST" id="formu1" action="{{route("Modifyray1")}}">
-                                                    @csrf
-                                                    <input id="in1" hidden type="number" value="{{ $rayon->id}}" name="id" >
-                                                    <input id="in2" hidden type="text" value="{{ $rayon->code }}" name="code" >
-                                                    <input id="in3" hidden type="text" value="{{ $rayon->libelle }}" name="lib" >
-                                                    <button id="in9" type="submit" class="btn btn-dark" >Modify Rayon</button>
-                                                </form></td>
+                                            <td><a class="btn btn-dark" href="{{route("Modifyray1",$rayon->id)}}">Modify Rayon</a></td>
                                             @if(!$rayon->checkrayon($rayon->id))
                                             <td><a class="btn btn-danger" onclick="return confirm('Are you sure?')" href="{{route("Deleteray1",$rayon->id)}}">Delete Rayon</a></td>
                                             @else

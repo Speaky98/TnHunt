@@ -4,19 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Animal;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
+
 class AnimalController extends Controller
 {
 
     public function index()
     {
+        $route = Route::current()->getName();
         $animals = Animal::all();
-        return view('layouts.Dashboard.animals.index',['animals'=>$animals]);
+        return view('layouts.Dashboard.animals.index',['animals'=>$animals,"route"=>$route]);
     }
 
 
     public function create()
     {
-        return view ('layouts.Dashboard.animals.create');
+        $route = Route::current()->getName();
+        return view ('layouts.Dashboard.animals.create',["route"=>$route]);
     }
 
 
@@ -64,7 +69,8 @@ class AnimalController extends Controller
     public function edit($id)
     {
         $animal=Animal::find($id);
-        return view('layouts.Dashboard.animals.edit',compact('animal'));
+        $route = Route::current()->getName();
+        return view('layouts.Dashboard.animals.edit',compact('animal','route'));
     }
 
 

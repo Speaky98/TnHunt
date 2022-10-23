@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Rayon;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Route;
 
 class ProductController extends Controller
@@ -51,8 +56,8 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Routing\Redirector
+     * @param Request $request
+     * @return Redirector
      */
 
     public function Add(Request $request)
@@ -60,7 +65,10 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required|max:191',
             'cat' => 'required|max:191',
-            'pri' => 'required'
+            'pri' => 'required',
+            'lim' => 'required',
+            'ima' => 'required',
+            'act' => 'required'
         ]);
         $product = new Product();
         $this->extracted($request, $product);
@@ -70,8 +78,8 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Routing\Redirector
+     * @param Request $request
+     * @return Redirector
      */
 
     public function Addrate(Request $request)
@@ -91,12 +99,34 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param $id
+     * @return Application|Factory|View
+     */
+
+    public function Modifybefore($id)
+    {
+        $list=Rayon::all();
+        $route = Route::current()->getName();
+        return view("layouts.Dashboard.tables.crud.modifyproduct")->with('req',Product::find($id))->with('route',$route)->with('list',$list);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param Request $request
+     * @return RedirectResponse
      */
 
     public function Modify(Request $request)
     {
+        $request->validate([
+            'name' => 'required|max:191',
+            'cat' => 'required|max:191',
+            'pri' => 'required',
+            'lim' => 'required',
+            'act' => 'required'
+
+        ]);
         $product = Product::find($request->id);
         $this->extracted($request, $product);
         return redirect()->route('productpage');
@@ -105,8 +135,8 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * @param Request $request
+     * @return RedirectResponse
      */
 
     public function Delete($id)
