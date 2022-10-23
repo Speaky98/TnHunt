@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProgChasseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/progchasse', ProgChasseController::class);
+
 Route::get("/Table",function (){
     return view("layouts.Dashboard.tables.simple");
 })->name("firstpage");
