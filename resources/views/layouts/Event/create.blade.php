@@ -12,8 +12,15 @@
         @error('name')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror</br>
-        <label>Address</label></br>
-        <input type="text" name="address" id="address" class="form-control">  
+        <div class="form-group">
+                            <label for="address" class="col-md-4 control-label">Address</label>
+                                <select name="address"  class="form-control">
+                                    @foreach($addresss as $adress)
+                                        <option value="{{ $adress->name}}">{{ $adress->name }}</option>
+                                    @endforeach
+                                </select>
+                          
+                        </div> 
         @error('address')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror</br>

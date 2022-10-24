@@ -10,4 +10,11 @@ class Event extends Model
     protected $table = 'events';
     protected $primaryKey = 'id';
     protected $fillable = ['name', 'address', 'dateS','dateE'];
+
+
+
+    public function Adress()
+    {
+        return $this->hasMany('App\Models\Address');
+    }
 }

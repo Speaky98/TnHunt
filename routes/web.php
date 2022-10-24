@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventsController;
+use App\Http\Controllers\AddressController;
+
 
 
 /*
@@ -27,6 +29,10 @@ Route::get("/Front",function (){
 
 Route::resource("/event", EventsController::class);
 Route::post('add',[EventsController::class,'createEvent']);
+
+Route::resource("/address", AddressController::class);
+
+Route::post('addAddress',[AddressController::class,'createAddress']);
 
 
 Auth::routes();

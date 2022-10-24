@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Address;
 class EventsController extends Controller
 {
     public function __construct()
@@ -18,7 +19,9 @@ class EventsController extends Controller
     
     public function create()
     {
-        return view('layouts.Event.create');
+        $addresss = Address::all();
+
+        return view('layouts.Event.create',['addresss'=>$addresss]);
     }
   
   
@@ -33,9 +36,14 @@ class EventsController extends Controller
    ],[
     'dateE.after'=>'End date must be after Start Date',
     'dateS.after'=>'Start date must be after Today',
-    'name.min'=>'Name is must have at least 5 char'
+    'name.min'=>'Name is must have at least 5 char',
+    'dateS.required'=>'Start Date is required',
+    'dateE.required'=>'End Date is required',
+    'name.required'=>'Name is required',
+    'address.required'=>'Address is required'
    ]);
        $event=new Event;
+      
        $event->name=$req->name;
        $event->address=$req->address;
        $event->dateS=$req->dateS;
@@ -53,12 +61,30 @@ class EventsController extends Controller
     
     public function edit($id)
     {
+        
         $events = Event::find($id);
-        return view('layouts.Event.edit')->with('events', $events);
+        $addresss = Address::all();
+
+        return view('layouts.Event.edit',['addresss'=>$addresss])->with('events', $events);
     }
   
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name'=>'required|min:5',
+            'address'=>'required',
+            'dateS'=>'required|after:today',
+            'dateE'=>'required|after:dateS'
+
+   ],[
+    'dateE.after'=>'End date must be after Start Date',
+    'dateS.after'=>'Start date must be after Today',
+    'name.min'=>'Name is must have at least 5 char',
+    'dateS.required'=>'Start Date is required',
+    'dateE.required'=>'End Date is required',
+    'name.required'=>'Name is required',
+    'address.required'=>'Address is required'
+   ]);
         $events = Event::find($id);
         $input = $request->all();
         $events->update($input);
