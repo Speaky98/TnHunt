@@ -28,16 +28,25 @@
             @endphp
             <div class="row">
                 @foreach($list as $event)
+                <div class="card" style="width: 18rem;">
+  <div class="card-body">
+  <div  class="btn btn-primary " style="algin-content:center">Event</div>
+
+    <h3 class="card-title">Name: {{ $event->name }}</h3>
+    <h5 class="card-text">Address: {{  $event->address }}</h5>
+    <h5>Start Date: {{  $event->dateS }} </h5>
+    <h5>End Date: {{  $event->dateE }} </h5>
+  </div>
+</div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
                         <div class="single-new-pro mb-30 text-center">
                             <div class="product-img">
                              
                             </div>
                             <div class="product-caption">
-                                <h3><a href="#">{{ $event->name }}</a></h3>
-                                <span>{{  $event->address }} </span>
-                                <h3>{{  $event->dateS }} </h3>
-                                <h3>{{  $event->dateE }} </h3>
+                                <h3><a href="#"></a></h3>
+                                <span> </span>
+                               
 
                             </div>
                          
