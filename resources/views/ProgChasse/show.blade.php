@@ -38,7 +38,11 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header">Détail du programme</div>
+                            <div class="card-header">Détail du programme
+                            <a href="{{ url('add/'.$ProgChasse->id) }}" class="btn btn-success btn-sm ml-5" title="Add New Student">
+                                <i class="fa fa-plus" aria-hidden="true"></i> Participer
+                                 </a>
+                            </div>
                             <div class="card-body">
                             
                                     <div class="card-body">

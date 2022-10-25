@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ParticiperprogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProgChasseController;
 
@@ -19,6 +20,9 @@ Route::get('/', function () {
 });
 
 Route::resource('/progchasse', ProgChasseController::class);
+Route::resource('/participerprog', ParticiperprogController::class);
+Route::get('/add/{id}',[ParticiperprogController::class,'add']);
+Route::post('/save/{id}',[ParticiperprogController::class,'createParticipant']);
 
 Route::get("/Table",function (){
     return view("layouts.Dashboard.tables.simple");
