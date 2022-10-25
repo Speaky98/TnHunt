@@ -79,9 +79,7 @@
                                         <a href="{{url('Eventclient')}}" class="dropdown-item border-radius-md">
                                             <span>Events</span>
                                         </a>
-                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
-                                            Account
-                                        </h6>
+                                       
                                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
