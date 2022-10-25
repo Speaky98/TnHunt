@@ -9,9 +9,11 @@ use Illuminate\Support\Facades\Route;
 
 class ChienController extends Controller
 {
+
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['chiens', 'index']]);
+        $this->middleware('auth');
+
     }
 
     public function index()

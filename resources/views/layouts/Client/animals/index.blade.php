@@ -6,9 +6,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mx-auto my-auto">
-                    <h1 class="text-white">Work with an amazing design</h1>
-                    <p class="lead mb-4 text-white opacity-8">We’re constantly trying to express ourselves and actualize our dreams. If you have the opportunity to play this game</p>
-                    <button type="submit" class="btn bg-white text-dark">Create Account</button>
+                    <h1 class="text-white">Discover all breeds informations</h1>
+                    <p class="lead mb-4 text-white opacity-8">We’re constantly trying to provide you some informations about the word of hunting</p>
+
                     <h6 class="text-white mb-2 mt-5">Find us on</h6>
                     <div class="d-flex justify-content-center">
                         <a href="javascript:;"><i class="fab fa-facebook text-lg text-white me-4"></i></a>
@@ -31,8 +31,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 text-start mb-5 mt-5">
-                    <h3 class="text-white z-index-1 position-relative">The Executive Team</h3>
-                    <p class="text-white opacity-8 mb-0">There’s nothing I really wanted to do in life that I wasn’t able to get good at. That’s my skill.</p>
+                    <h3 class="text-white z-index-1 position-relative">TnHunt</h3>
+                    <p class="text-white opacity-8 mb-0">Here's where you find all animals that you are allowed to hunt</p>
                 </div>
             </div>
             <div class="row">
@@ -40,7 +40,8 @@
                 <div class="col-lg-6 col-12">
                     <div class="card card-profile mt-4">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12 mt-n5" > </br>
+                            <div class="col-lg-4 col-md-6 col-12 mt-n5" >
+                                </br>
                                 <a href="javascript:;" >
                                     <div  class="p-3 pe-md-0"  >
                                         <img class="w-75 border-radius-md shadow-lg" src="{{asset("/storage/images/animals/" .$animal->image)}}" alt="image">
