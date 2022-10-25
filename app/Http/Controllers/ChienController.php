@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Route;
 
 class ChienController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['chiens', 'index']]);
+    }
 
     public function index()
     {
@@ -69,6 +73,8 @@ class ChienController extends Controller
 
     public function update(Request $request, $id)
     {
+
+
         $chien=Chien::find($id);
 
 
