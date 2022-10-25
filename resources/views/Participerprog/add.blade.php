@@ -24,7 +24,7 @@
                         <div class="card-body">
                             
                             <form action="{{ url('save/' . $ProgChasse->id) }}" method="post">
-                                {!! csrf_field() !!}
+                            @csrf
                                 <label>Nom</label></br>
                                 <input type="text" name="nom" id="nom" class="form-control">
                                 @error('nom')
