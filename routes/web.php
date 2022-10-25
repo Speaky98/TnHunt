@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventsController;
+use App\Http\Controllers\AddressController;
+use App\Http\Controllers\ProgChasseController;
+use App\Http\Controllers\ParticiperprogController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +28,20 @@ Route::get("/Table",function (){
 Route::get("/Front",function (){
     return view("layouts.Client.main");
 });
+
+Route::resource("/event", EventsController::class);
+Route::post('add',[EventsController::class,'createEvent']);
+
+Route::resource("/address", AddressController::class);
+
+Route::post('addAddress',[AddressController::class,'createAddress']);
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('/progchasse', ProgChasseController::class);
+Route::resource('/participerprog', ParticiperprogController::class);
+Route::get('/add/{id}',[ParticiperprogController::class,'add']);
+Route::post('/save/{id}',[ParticiperprogController::class,'createParticipant']);
+
