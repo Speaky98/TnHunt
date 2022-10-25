@@ -89,6 +89,7 @@ Route::get("/Deleterayon/{id}",[RayonController::class,'Delete'])->name("Deleter
 /********Client*********/
 
 Route::get("/Productclient",[ProductController::class,'indexclient'])->name("productpageclient");
+Route::get("/Eventclient",[EventsController::class,'iclient'])->name("eventpageclient");
 
 Route::post("/Ajoutafterrate",[ProductController::class,'Addrate'])->name("Modifyrate2");
 
