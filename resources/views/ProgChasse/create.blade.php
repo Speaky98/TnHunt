@@ -36,11 +36,20 @@
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror</br>
                                 <label>Nombre de personnes</label></br>
-                                <input type="number" name="numpeople" id="numpeople" class="form-control"></br>
+                                <input type="number" name="numpeople" id="numpeople" class="form-control">
+                                @error('numpeople')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Description</label></br>
-                                <input type="text" name="description" id="description" class="form-control"></br>
+                                <input type="text" name="description" id="description" class="form-control">
+                                @error('description')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Prix</label></br>
-                                <input type="text" name="costs" id="costs" class="form-control"></br>
+                                <input type="text" name="costs" id="costs" class="form-control">
+                                @error('costs')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <input type="submit" value="Save" class="btn btn-success"></br>
                             </form>
                         

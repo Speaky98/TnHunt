@@ -87,6 +87,19 @@ class ProgChasseController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'location'=>'required|min:5',
+            'date'=>'required|after:today',
+            'numpeople'=>'required|numeric',
+            'description'=>'required|min:5',
+            'costs'=>'required|numeric',
+        ],[
+            'numpeople.numeric'=>'numpeople must be numeric',
+            'costs.numeric'=>'numpeople must be numeric',
+            'date.after'=>'The date must be after Today',
+            'location.min'=>'location is must have at least 5 char',
+            'description.min'=>'description is must have at least 5 char'
+        ]);
         $ProgChasse = ProgChasse::find($id);
         $input = $request->all();
         $ProgChasse->update($input);

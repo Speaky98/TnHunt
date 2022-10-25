@@ -28,15 +28,30 @@
                                 @method("PATCH")
                                 <input type="hidden" name="id" id="id" value="{{$ProgChasse->id}}" id="id" />
                                 <label>Location</label></br>
-                                <input type="text" name="location" id="location" value="{{$ProgChasse->location}}" class="form-control"></br>
+                                <input type="text" name="location" id="location" value="{{$ProgChasse->location}}" class="form-control">
+                                @error('location')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Date</label></br>
-                                <input type="date" name="date" id="date" value="{{$ProgChasse->date}}" class="form-control"></br>
+                                <input type="date" name="date" id="date" value="{{$ProgChasse->date}}" class="form-control">
+                                @error('date')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Nombre de personnes</label></br>
-                                <input type="number" name="numpeople" id="numpeople" value="{{$ProgChasse->numpeople}}" class="form-control"></br>
+                                <input type="number" name="numpeople" id="numpeople" value="{{$ProgChasse->numpeople}}" class="form-control">
+                                @error('numpeople')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Description</label></br>
-                                <input type="text" name="description" id="description" value="{{$ProgChasse->description}}" class="form-control"></br>
+                                <input type="text" name="description" id="description" value="{{$ProgChasse->description}}" class="form-control">
+                                @error('description')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <label>Prix</label></br>
-                                <input type="text" name="costs" id="costs" value="{{$ProgChasse->costs}}" class="form-control"></br>
+                                <input type="text" name="costs" id="costs" value="{{$ProgChasse->costs}}" class="form-control">
+                                @error('costs')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</br>
                                 <input type="submit" value="Update" class="btn btn-success"></br>
                             </form>
                         
