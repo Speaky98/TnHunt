@@ -1,7 +1,6 @@
-@extends('layouts.Dashboard.admin')
-
-@section('contents')
-<div class="container">
+@extends("layouts.Client.client")
+@section("content_2")
+<div class="container" style="margin-top:100px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
