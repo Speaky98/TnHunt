@@ -34,7 +34,10 @@
                                             <span>Contact Us</span>
                                         </a>
                                         <a href="{{route("productpageclient")}}" class="dropdown-item border-radius-md">
-                                            <span>Product</span>
+                                            <span>Products</span>
+                                        </a>
+                                        <a href="{{url('Eventclient')}}" class="dropdown-item border-radius-md">
+                                            <span>Events</span>
                                         </a>
                                         <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
                                             Account

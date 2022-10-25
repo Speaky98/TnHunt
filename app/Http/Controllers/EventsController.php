@@ -23,7 +23,11 @@ class EventsController extends Controller
 
         return view('layouts.Event.create',['addresss'=>$addresss]);
     }
-  
+    public function iclient()
+    {
+        return view("layouts.Client.front.displayEvents",["list"=>Event::all()]);
+    }
+
   
      public function createEvent(Request $req)
     {

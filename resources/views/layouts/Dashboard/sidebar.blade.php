@@ -33,34 +33,19 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class
-                     with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    @if($route=="backpage")
-                    <a href="{{route("backpage")}}" class="nav-link active">
+
+                    <a href="{{route("backpage")}}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
                     </a>
-                    @else
-                        <a href="{{route("backpage")}}
-                        " class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                Dashboard
-                            </p>
-                        </a>
-                    @endif
-
                 </li>
 
                 <li class="nav-item">
-                    @if(in_array($route, ['productpage','rayonpage','Modifyprod1','animals.index','chiens.index','animals.edit','animals.create','chiens.edit','chiens.create']))
-                    <a href="#" class="nav-link active">
-                        @else
                             <a href="#" class="nav-link">
-                                @endif
+
                         <i class="nav-icon fas fa-table"></i>
                         <p>
                             Tables
@@ -69,46 +54,69 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            @if(in_array($route, ['productpage','Modifyprod1']))
-                            <a href="{{route("productpage")}}" class="nav-link active">
-                                @else
-                                    <a href="{{route("productpage")}}" class="nav-link">
-                                        @endif
+                            <a href="{{route("productpage")}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Product</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            @if(in_array($route, ['rayonpage','Modifyray1']))
-                                <a href="{{route("rayonpage")}}" class="nav-link active">
-                                    @else
-                                        <a href="{{route("rayonpage")}}" class="nav-link">
-                                            @endif
+                                <a href="{{route("rayonpage")}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Rayon</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            @if(in_array($route, ['animals.index','animals.edit','animals.create']))
-                                <a href="{{route("animals.index")}}" class="nav-link active">
-                                    @else
-                                        <a href="{{route("animals.index")}}" class="nav-link">
-                                            @endif
+                                <a href="{{route("animals.index")}}" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Animal</p>
                                         </a>
                         </li>
                         <li class="nav-item">
-                            @if(in_array($route, ['chiens.index','chiens.edit','chiens.create']))
-                                <a href="{{route("chiens.index")}}" class="nav-link active">
-                                    @else
-                                        <a href="{{route("chiens.index")}}" class="nav-link">
-                                            @endif
+                                <a href="{{route("chiens.index")}}" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Dog</p>
                                         </a>
                         </li>
+                        <li class="nav-item">
+                    <a href="{{ url('event') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                           Events
 
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('address') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                           Address
+
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('progchasse') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                           Hunt Program
+
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url('participerprog') }}" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                           Participation
+
+                        </p>
+                    </a>
+
+                </li>
                     </ul>
                 </li>
                 <li class="nav-header">EXAMPLES</li>
