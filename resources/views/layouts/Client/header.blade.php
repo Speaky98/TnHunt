@@ -42,7 +42,7 @@
                                         <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
                                             Account
                                         </h6>
-                                        <a href="./pages/sign-in.html" class="dropdown-item border-radius-md">
+                                        <a href="{{url('login')}}" class="dropdown-item border-radius-md">
                                             <span>Sign In</span>
                                         </a>
                                     </div>
