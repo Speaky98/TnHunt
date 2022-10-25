@@ -59,7 +59,7 @@
                             <div class="form-group">
                                 <label >Prey</label>
 
-                                <select class="custom-select" name="animal_id">
+                                <select  class="custom-select" name="animal_id">
                                     @foreach($animals as $animal)
                                         <option value="{{ $animal->id }}">{{ $animal->name }}</option>
                                     @endforeach

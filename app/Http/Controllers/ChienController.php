@@ -26,7 +26,7 @@ class ChienController extends Controller
         $request->validate([
             'name' => 'required|max:50',
             'breed' => 'required|max:20',
-            'prey' => 'required|max:50',
+            'animal_id' => 'required|max:50',
             'image' => 'mimes:jpg,png',
             'description' => 'required|max:255',
         ]);
