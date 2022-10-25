@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 
 class ProductController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('guest', ['except' => ['Rayon']]);
+    }
+
     public function indextest()
     {
 //        $rayon=new Rayon();
