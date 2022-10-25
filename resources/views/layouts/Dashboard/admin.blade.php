@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="{{asset("plugins/daterangepicker/daterangepicker.css")}}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset("plugins/summernote/summernote-bs4.min.css")}}">
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -45,7 +44,7 @@
     <div class="preloader flex-column justify-content-center align-items-center">
         <img class="animation__shake" src="{{asset("dist/img/AdminLTELogo.png")}}" alt="AdminLTELogo" height="60" width="60">
     </div>
-@include("layouts.Dashboard.header")
+@include("layouts.app")
     @include("layouts.Dashboard.sidebar")
 
     @yield("content")

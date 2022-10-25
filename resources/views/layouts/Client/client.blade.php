@@ -1,16 +1,3 @@
-
-<!--
-=========================================================
-* Material Kit 2 - v3.0.4
-=========================================================
-
-* Product Page:  https://www.creative-tim.com/product/material-kit
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
@@ -25,10 +12,11 @@
 
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <!-- Nucleo Icons -->
     <link href="{{asset("assets/css/nucleo-icons.css")}}" rel="stylesheet" />
     <link href="{{asset("assets/css/nucleo-svg.css")}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset("rating.css")}}">
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
@@ -39,7 +27,7 @@
     <!-- CSS Files -->
 
     <link id="pagestyle" href="{{asset("assets/css/material-kit.css?v=3.0.4")}}" rel="stylesheet" />
-
+    <script src="{{asset("rating.js")}}"></script>
 </head>
 
 <body class="index-page bg-gray-200">
@@ -52,6 +40,7 @@
 
 
 <!--   Core JS Files   -->
+
 <script src="{{asset("assets/js/core/popper.min.js")}}" type="text/javascript"></script>
 <script src="{{asset("assets/js/core/bootstrap.min.js")}}" type="text/javascript"></script>
 <script src="{{asset("assets/js/plugins/perfect-scrollbar.min.js")}}"></script>
@@ -68,6 +57,14 @@
 <script src="{{asset("assets/js/plugins/choices.min.js")}}"></script>
 <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
 <script src="{{asset("assets/js/plugins/parallax.min.js")}}"></script>
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
 <!--  Google Maps Plugin    -->

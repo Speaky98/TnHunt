@@ -1,7 +1,10 @@
 <?php
+
 namespace App\Console\Commands;
+
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+
 class dbcreate extends Command
 {
     /**
@@ -10,19 +13,13 @@ class dbcreate extends Command
      * @var string
      */
     protected $signature = 'db:create {name?}';
+
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new MySQL database based on the database config file or the provided
-name';
-    /**
-     * Create a new command instance.
-     *
-
-
-    11
+    protected $description = 'Command description';
 
     /**
      * Execute the console command.
@@ -38,4 +35,6 @@ name';
         $query = "CREATE DATABASE IF NOT EXISTS $schemaName CHARACTER SET $charset COLLATE $collation;";
         DB::statement($query);
         config(["database.connections.mysql.database" => $schemaName]);
-    }}
+        return 0;
+    }
+}
