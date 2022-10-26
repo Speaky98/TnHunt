@@ -81,14 +81,11 @@
                                                             image</label>
                                                     </div>
                                                     <div class="input-group-append">
-                                                        <button type="submit" class="input-group-text">Upload</button>
+                                                        <button type="submit" class="input-group-text btn-success">Submit</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                            </div>
+
 
                                         </div>
                                     </form>

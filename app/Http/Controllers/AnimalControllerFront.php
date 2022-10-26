@@ -7,6 +7,10 @@ use App\Models\Animal;
 class AnimalControllerFront extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['animalsFront']]);
+    }
     public function index()
     {
         $animals = Animal::all();

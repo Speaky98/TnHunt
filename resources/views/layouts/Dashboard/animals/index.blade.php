@@ -49,12 +49,11 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Species</th>
-                                        <th>Rarety</th>
-                                        <th>Hunt Period</th>
                                         <th>Image</th>
-                                        <th>Description</th>
                                         <th>Edit</th>
                                         <th>Delete</th>
+                                        <th>Details</th>
+
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -63,12 +62,9 @@
                                             <td>{{$animal->id }}</td>
                                             <td>{{$animal->name }}</td>
                                             <td>{{$animal->species }}</td>
-                                            <td>{{$animal->rarety }}</td>
 
-                                            <td>{{$animal->hunt_period }}</td>
                                             <td><img height="50px"
                                                      src="{{asset("/storage/images/animals/" .$animal->image)}}"/></td>
-                                            <td>{{$animal->description }}</td>
                                             <td><a href="{{ route('animals.edit', $animal->id) }}">
                                                     <button type="submit" class="btn btn-outline-warning">Edit</button>
                                                 </a></td>

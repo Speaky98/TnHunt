@@ -4,9 +4,9 @@
             <div class="col-md-3 mb-4 ms-auto">
                 <div>
                     <a href="https://www.creative-tim.com/product/material-kit">
-                        <img src="./assets/img/logo-ct-dark.png" class="mb-3 footer-logo" alt="main_logo">
+                        <img src="../../../../../public/assets/img/hunting-png-3.jpg" class="mb-3 footer-logo" alt="main_logo">
                     </a>
-                    <h6 class="font-weight-bolder mb-4">Material Kit 2</h6>
+                    <h6 class="font-weight-bolder mb-4">TnHunt</h6>
                 </div>
                 <div>
                     <ul class="d-flex flex-row ms-n3 nav">
@@ -56,51 +56,11 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/templates/free" target="_blank">
-                                Freebies
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/templates/premium" target="_blank">
-                                Premium Tools
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/blog" target="_blank">
-                                Blog
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-md-2 col-sm-6 col-6 mb-4">
-                <div>
-                    <h6 class="text-sm">Resources</h6>
-                    <ul class="flex-column ms-n3 nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://iradesign.io/" target="_blank">
-                                Illustrations
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/bits" target="_blank">
-                                Bits & Snippets
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/affiliates/new" target="_blank">
-                                Affiliate Program
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
             <div class="col-md-2 col-sm-6 col-6 mb-4">
                 <div>
@@ -112,23 +72,7 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/knowledge-center" target="_blank">
-                                Knowledge Center
-                            </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://services.creative-tim.com/?ref=ct-mk2-footer" target="_blank">
-                                Custom Development
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://www.creative-tim.com/sponsorships" target="_blank">
-                                Sponsorships
-                            </a>
-                        </li>
 
                     </ul>
                 </div>
@@ -162,7 +106,7 @@
             <div class="col-12">
                 <div class="text-center">
                     <p class="text-dark my-4 text-sm font-weight-normal">
-                        All rights reserved. Copyright © <script>document.write(new Date().getFullYear())</script> Material Kit by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+                        All rights reserved. Copyright © <script>document.write(new Date().getFullYear())</script> TnHunt .
                     </p>
                 </div>
             </div>

@@ -76,6 +76,12 @@
                                         <a href="{{route("productpageclient")}}" class="dropdown-item border-radius-md">
                                             <span>Products</span>
                                         </a>
+                                        <a href="{{route("animalsFront.index")}}" class="dropdown-item border-radius-md">
+                                            <span>Animals</span>
+                                        </a>
+                                        <a href="{{route("chiensFront.index")}}" class="dropdown-item border-radius-md">
+                                            <span>Dogs</span>
+                                        </a>
                                         <a href="{{url('Eventclient')}}" class="dropdown-item border-radius-md">
                                             <span>Events</span>
                                         </a>

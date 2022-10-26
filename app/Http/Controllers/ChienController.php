@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Route;
 class ChienController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['chiens']]);
+    }
+
     public function index()
     {
         $route = Route::current()->getName();
@@ -69,6 +74,8 @@ class ChienController extends Controller
 
     public function update(Request $request, $id)
     {
+
+
         $chien=Chien::find($id);
 
 

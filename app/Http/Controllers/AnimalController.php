@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Storage;
 
 class AnimalController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['animals']]);
+    }
 
     public function index()
     {
