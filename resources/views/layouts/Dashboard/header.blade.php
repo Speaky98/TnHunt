@@ -14,7 +14,7 @@
     </ul>
 
     <!-- Right navbar links -->
-    
+
     <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
         <li class="nav-item">
@@ -39,8 +39,8 @@
         </li>
 
         <!-- Messages Dropdown Menu -->
-        
-  
+
+
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">

@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 
 class ChienControllerFront extends Controller
 {
-
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['chiensFront']]);
+    }
     public function index()
     {
         $chiens = Chien::All();
