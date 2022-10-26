@@ -17,7 +17,7 @@ class ProductController extends Controller
 
     public function __construct()
     {
-        $this->middleware('guest', ['except' => ['Rayon']]);
+        $this->middleware('auth', ['except' => ['Product']]);
     }
 
     public function indextest()
