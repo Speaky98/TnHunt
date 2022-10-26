@@ -17,6 +17,11 @@ class ProgChasseController extends Controller
     {
         $this->middleware('auth', ['except' => ['ProgChasse', 'show']]);
     }
+
+    public function pgclient()
+    {
+        return view("layouts.Client.front.displayProgChasse",["list"=>ProgChasse::all()]);
+    }
     public function index()
     {
         $ProgChasse = ProgChasse::all();

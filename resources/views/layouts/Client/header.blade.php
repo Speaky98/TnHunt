@@ -79,6 +79,9 @@
                                         <a href="{{url('Eventclient')}}" class="dropdown-item border-radius-md">
                                             <span>Events</span>
                                         </a>
+                                        <a href="{{url('ProgrammeChasseclient')}}" class="dropdown-item border-radius-md">
+                                            <span>Hunt Programs</span>
+                                        </a>
                                        
                                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
