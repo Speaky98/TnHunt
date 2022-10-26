@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 class RayonController extends Controller
 {
 
-//    public function __construct()
-//    {
-//        $this->middleware('auth', ['except' => ['Rayon']]);
-//    }
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['Rayon']]);
+    }
 
     public function index()
     {
